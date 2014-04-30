@@ -43,7 +43,7 @@
 		echo 'NOT ADDED';
 		
 	else{
-		require_once "Mail.php";
+		require_once "pear/Mail.php";
 
 		$from = 'viskoteam4@gmail.com';
 		$to = $newEmail;
