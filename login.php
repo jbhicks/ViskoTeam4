@@ -28,7 +28,6 @@
 		echo "Found!";
 		$_SESSION['email']=$sql;
 		$_SESSION['loggedInEmail'] = $_POST['email'];
-		mail('walter.padilla@gmail.com','FROM VISKO SITE','LOGIN SUCCESSFUL','From:wpadilla@miners.utep.edu');
 		header("location:loginsuccess.php");
 	}
 	
