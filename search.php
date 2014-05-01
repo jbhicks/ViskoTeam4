@@ -33,43 +33,39 @@
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <?php include "header.php" ?>
   </div>
-  <div class="container">
+  <div class="container-fluid">
     <div class="row">
-        <?php include 'nav.php'; ?>
-    </div>
-  </div>
-  <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">Search History</h1>
-    <div class="row">
-        <div class="col-md-10" ng-controller="searchCtrl">
-            <b>Abstraction Type </b>
-            <select class="list-group-item" ng-model="myAbs" ng-options="abstraction.option_title for abstraction in abstractions"></select>
-            <b>Input URL</b>
-            <span class="nullable">
-                <select class="list-group-item" ng-model="myAbs" ng-options="abstraction.option_title for abstraction in abstractions">
-                    <option value=""></option></select>
-            </span>
-            <b>Viewer Set</b>
-            <select class="list-group-item" ng-model="myAbs" ng-options="abstraction.option_title for abstraction in abstractions"></select>
-            <b>Source Format</b>
-            <select class="list-group-item" ng-model="myAbs" ng-options="abstraction.option_title for abstraction in abstractions"></select>
-            <b>Source Type</b>
-            <select class="list-group-item" ng-model="myAbs" ng-options="abstraction.option_title for abstraction in abstractions"></select>
+        <div class=""col-md-3 sidebar">
+            <?php include 'nav.php'; ?>
         </div>
-        <div class="col-md-6" ng-controller="DatePickerCtrl" style="float: right">
-            <p class="input-group">
-              <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
-              <span class="input-group-btn">
-                <button class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
-              </span>
-            </p>
+        <div class="col-md-offset-2 content">
+            <h1 class="page-header">Search History</h1>
+            <div style="display:inline-block; min-height:290px;">
+                <b>Start Date: {{dt1 | date:'fullDate'}}</b>
+                <div class="well well-sm" ng-model="dt1">
+                    <datepicker min="minDate" show-weeks="showWeeks"></datepicker>
+                </div>
+            </div>
+            <div style="display:inline-block; min-height:290px;">
+                <b>End Date: {{dt2 | date:'fullDate'}}</b>
+                <div class="well well-sm" ng-model="dt2">
+                    <datepicker min="minDate" show-weeks="showWeeks"></datepicker>
+                </div>
+            </div>
+
+        </div>
+            <div class="col-md-offset-2 content" ng-controller="searchCtrl">
+                <h1 class="page-header">Search Results</h1>
+                <div class="gridStyle" ng-grid="gridOptions">
+                </div
+            </div>
         </div>
     </div>
-    
+
+
+
   </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-    <h1 class="page-header">Search Results</h1>
-  </div>
+
   </body>
 </html>
 

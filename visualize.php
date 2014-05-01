@@ -1,3 +1,4 @@
+<? session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,11 +35,11 @@
           <?php include 'nav.php'; ?>
       </div>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+    <div class="col-md-offset-2 content">
       <h1 class="page-header">Visualization Search Criteria</h1>
-      <h5>Option 1: Submit Visualization Query</h5>
-      <iframe src="http://localhost:8080/viskoapi?username=jbhicks" height="500" width="1500"></iframe>
+    <? echo "<iframe src=\"http://localhost:8080/viskoapi?username=".$_SESSION['loggedInEmail']."\" height=\"1000\" width=\"1200\""; ?>
     </div>
+  </div>
   </body>
 </html>
 
