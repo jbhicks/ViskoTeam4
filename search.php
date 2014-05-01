@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" ng-app="search">
 <head>
@@ -33,9 +34,9 @@
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <?php include "header.php" ?>
   </div>
-  <div class="container-fluid">
+  <div class="container-fluid" ng-controller="DatePickerCtrl">
     <div class="row">
-        <div class=""col-md-3 sidebar">
+        <div class="container">
             <?php include 'nav.php'; ?>
         </div>
         <div class="col-md-offset-2 content">
@@ -54,7 +55,8 @@
             </div>
 
         </div>
-            <div class="col-md-offset-2 content" ng-controller="searchCtrl">
+            <div class="col-md-offset-2 content">
+                <button type="button" class="btn btn-primary" ng-click="search()">Search</button>
                 <h1 class="page-header">Search Results</h1>
                 <div class="gridStyle" ng-grid="gridOptions">
                 </div
