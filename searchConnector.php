@@ -1,17 +1,26 @@
 <?php
-include 'db_connection.php';
+include 'ChromePhp.php';
 session_start();
-unlink('my_log.txt');
-$username = $_POST['loggedInEmail'];
+$con = mysqli_connect('earth.cs.utep.edu','cs4311team4sp14','atom4','cs4311team4sp14');
+if (mysqli_connect_errno()) {
+    ChromePhp::log("Could not connect to DB");
+}
+$username = $_SESSION['loggedInEmail'];
 $data = file_get_contents("php://input");
 $objData = json_decode($data);
-log_to_file($objData);
-log_to_file($username);
-#$query ="SELECT * FROM `pipeline` WHERE (date BETWEEN)"
-echo json_encode($objData);
-
-function log_to_file($text) {
-    $f = fopen('my_log.txt', 'a');
-    fwrite($f, print_r($text, true) . "\n");
-    fclose($f);
+if ($objData->start == $objData->end){
+    $query = "SELECT * FROM `pipeline` WHERE (date = '".$objData->start."' AND username='".$username."')";
+    ChromePhp::log($query);
 }
+else {
+    $query ="SELECT * FROM `pipeline` WHERE (date BETWEEN '".$objData->start."' AND '".$objData->end."' AND username='".$username."')";
+    ChromePhp::log($query);
+}
+$result = mysqli_query($con, $query);
+$rows = array();
+while($r = mysqli_fetch_assoc($result)){
+    $rows[] = $r;
+}
+ChromePhp::LOG($rows);
+
+echo json_encode($rows);

@@ -14,7 +14,6 @@
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- NG-Grid CSS -->
   <link rel="stylesheet" type="text/css" href="css/ng-grid.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/search.css" />
   <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/overcast/jquery-ui.css" />
         
   <!-- Custom styles for this template -->

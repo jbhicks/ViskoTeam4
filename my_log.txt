@@ -1,20 +1,108 @@
-stdClass Object
+Array
 (
-    [start] => 2014-04-30
-    [end] => 2014-05-01
+    [0] => Array
+        (
+            [0] => 43
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-pdf-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PDF.owl#PDF
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_gmt.owl#gmt
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/pdfDocument_1398947239123.pdf
+            [8] => 2014-05-01
+        )
+
+    [1] => Array
+        (
+            [0] => 44
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-image-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PNG.owl#PNG
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_gmt.owl#gmt
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/image_1398947242341.png
+            [8] => 2014-05-01
+        )
+
+    [2] => Array
+        (
+            [0] => 45
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-image-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PNG.owl#PNG
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_gmt.owl#gmt
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/image_1398947264192.png
+            [8] => 2014-05-01
+        )
+
+    [3] => Array
+        (
+            [0] => 46
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-pdf-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PDF.owl#PDF
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_ncl.owl#ncl
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/pdfDocument_1398947267290.pdf
+            [8] => 2014-05-01
+        )
+
+    [4] => Array
+        (
+            [0] => 47
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-image-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PNG.owl#PNG
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_ncl.owl#ncl
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/image_1398947270542.png
+            [8] => 2014-05-01
+        )
+
+    [5] => Array
+        (
+            [0] => 48
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-image-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PNG.owl#PNG
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_ncl.owl#ncl
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/image_1398947273394.png
+            [8] => 2014-05-01
+        )
+
+    [6] => Array
+        (
+            [0] => 49
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-pdf-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PDF.owl#PDF
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_gmt.owl#gmt
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/pdfDocument_1398947275994.pdf
+            [8] => 2014-05-01
+        )
+
+    [7] => Array
+        (
+            [0] => 50
+            [1] => test2@test.com
+            [2] => http://openvisko.org/rdf/ontology/visko-view.owl#2D_ContourMap
+            [3] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_webbrowser.owl#web-browser-image-viewer
+            [4] => http://visko.cybershare.utep.edu:5080/visko-web/test-data/gravity/gravityDataset.txt
+            [5] => http://openvisko.org/rdf/pml2/formats/PNG.owl#PNG
+            [6] => http://visko.cybershare.utep.edu:5080/visko-web/registry/module_gmt.owl#gmt
+            [7] => http://visko.cybershare.utep.edu:5080/module_gs/output/image_1398947278937.png
+            [8] => 2014-05-01
+        )
+
 )
-
-stdClass Object
-(
-    [start] => 2014-04-30
-    [end] => 2014-05-01
-)
-
-
-stdClass Object
-(
-    [start] => 2014-04-30
-    [end] => 2014-05-01
-)
-
 
