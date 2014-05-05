@@ -28,6 +28,7 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -57,14 +58,20 @@
             <div class="col-md-offset-2 content">
                 <button type="button" class="btn btn-primary" ng-click="search()">Search</button>
                 <h1 class="page-header">Search Results</h1>
-                <div class="gridStyle" ng-grid="gridOptions">
-                </div
+                <div class="gridStyle" ng-grid="gridOptions"></div>                
+            </div>
+            <div class="col-md-offset-2 content">
+                <h1 class="page-header">Images</h1>
+                 <div class="row">
+                  <div class="col-xs-6 col-md-3" ng-repeat="data in myData">
+                    <a href={{data.resultURL}} class="thumbnail">
+                      <img ng-src="{{data.resultURL}}"> 
+                    </a>
+                  </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-
   </div>
 
   </body>

@@ -9,7 +9,7 @@ $username = $_SESSION['loggedInEmail'];
 $data = file_get_contents("php://input");
 $objData = json_decode($data);
 if ($objData->start == $objData->end){
-    $query = "SELECT * FROM `pipeline` WHERE (date = '".$objData->start."' AND username='".$username."')";
+    $query = "SELECT * FROM `pipeline` WHERE (date = '".$objData->start."' AND username = '".$username."')";
     ChromePhp::log($query);
 }
 else {
@@ -19,6 +19,11 @@ else {
 $result = mysqli_query($con, $query);
 $rows = array();
 while($r = mysqli_fetch_assoc($result)){
+    $r['abstraction'] = substr($r['abstraction'], strpos($r['abstraction'], "#")+1);
+    $r['abstraction'] = str_replace('_', " ", $r['abstraction']);
+    $r['viewerURI'] = substr($r['viewerURI'], strpos($r['viewerURI'], "#")+1);
+    $r['outputFormat'] = substr($r['outputFormat'], strpos($r['outputFormat'], "#")+1);
+    $r['toolkit'] = substr($r['toolkit'], strpos($r['toolkit'], "#")+1);
     $rows[] = $r;
 }
 ChromePhp::LOG($rows);

@@ -49,11 +49,11 @@ var DatePickerCtrl = function ($scope, $http, $filter) {
         multiSelect: false,
         enableColumnResize: true,
         columnDefs: [{field: 'id', displayName: 'ID', width: "3%"},
-            {field: 'abstraction', displayName: 'Abstraction Type', width: "*"},
-            {field: 'viewerURI', displayName: 'Viewer', width: "*"},
+            {field: 'abstraction', displayName: 'Abstraction Type', width: "8%"},
+            {field: 'viewerURI', displayName: 'Viewer', width: "12%"},
             {field: 'artifactURL', displayName: 'Input', width: "*"},
-            {field: 'outputFormat', displayName: 'Format', width: "*"},
-            {field: 'toolkit', displayName: 'Toolkit', width: "*"},
+            {field: 'outputFormat', displayName: 'Format', width: "4%"},
+            {field: 'toolkit', displayName: 'Toolkit', width: "4%"},
             {field: 'resultURL', displayName: 'Result', width: "*"},
             {field: 'date', displayName: 'Date', width: "6%"}]
     };
@@ -73,16 +73,19 @@ var DatePickerCtrl = function ($scope, $http, $filter) {
             headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
         }).success(function(data) {
                 $scope.result = angular.fromJson(data);
-                angular.forEach($scope.result, function(value, key) {
-
-                    console.log(value);
-                    //value.abstraction = value.abstraction.substr(value.abstraction.indexOf('#')+1, value.abstraction.length);
-                    //value.abstraction = value.abstraction.replace("_", " ");
-                    //console.log(value.abstraction);
-                });
                 $scope.myData = $scope.result;
                 console.log(data);
+                for (var i = 0; i < $scope.myData.length; i++){
+                    $scope.addSlide($scope.myData[i].resultURL);
+                }
             });
+    };
+    $scope.myInterval = 5000;
+    var slides = $scope.slides = [];
+    $scope.addSlide = function(link) {
+        slides.push({
+            image: link
+        });
     };
 };
 
