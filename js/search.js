@@ -2,23 +2,23 @@ angular.module('search', ['ngGrid', 'ui.bootstrap']);
 
 var DatePickerCtrl = function ($scope, $http, $filter) {
     $scope.today = function() {
-    $scope.dt = new Date();
-    $scope.minDate = null;
+        $scope.dt = new Date();
+        $scope.minDate = null;
     };
     $scope.today();
 
     $scope.showWeeks = true;
     $scope.toggleWeeks = function () {
-    $scope.showWeeks = ! $scope.showWeeks;
+        $scope.showWeeks = ! $scope.showWeeks;
     };
 
     $scope.clear = function () {
-    $scope.dt = null;
+        $scope.dt = null;
     };
 
     // Disable weekend selection
     $scope.disabled = function(date, mode) {
-    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+        return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
     };
 
     $scope.toggleMin = function() {
@@ -57,6 +57,7 @@ var DatePickerCtrl = function ($scope, $http, $filter) {
             {field: 'resultURL', displayName: 'Result', width: "*"},
             {field: 'date', displayName: 'Date', width: "6%"}]
     };
+
     $scope.search = function() {
         $scope.url = 'searchConnector.php';
         $scope.startEndDates = new Object();
@@ -75,17 +76,8 @@ var DatePickerCtrl = function ($scope, $http, $filter) {
                 $scope.result = angular.fromJson(data);
                 $scope.myData = $scope.result;
                 console.log(data);
-                for (var i = 0; i < $scope.myData.length; i++){
-                    $scope.addSlide($scope.myData[i].resultURL);
-                }
             });
     };
-    $scope.myInterval = 5000;
-    var slides = $scope.slides = [];
-    $scope.addSlide = function(link) {
-        slides.push({
-            image: link
-        });
-    };
+    
 };
 

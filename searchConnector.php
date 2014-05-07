@@ -13,7 +13,7 @@ if ($objData->start == $objData->end){
     ChromePhp::log($query);
 }
 else {
-    $query ="SELECT * FROM `pipeline` WHERE (date BETWEEN '".$objData->start."' AND '".$objData->end."' AND username='".$username."')";
+    $query ="SELECT * FROM `pipeline` WHERE (date BETWEEN '".$objData->start."' AND '".$objData->end."')";
     ChromePhp::log($query);
 }
 $result = mysqli_query($con, $query);
