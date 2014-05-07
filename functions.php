@@ -6,7 +6,7 @@ if($stmt = $mysqli->prepare("SELECT ".$information." FROM ".$table)){
        	$stmt->execute(); 
         $stmt->store_result(); 
         $stmt->bind_result($id, $name);
-        	echo '<select style="width: '.$size.'px" name="option">'; 
+        	echo '<select class="selectpicker" style="width: '.$size.'px; position:absolute; top:500px;" name="option">'; 
             while($stmt->fetch())
             	echo '<option value = "'.$name.'">'.$name.'</option>'; 
             echo '</select>';
