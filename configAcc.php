@@ -27,16 +27,40 @@
   <![endif]-->
   </head>
   <body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <?php include "header.php" ?>
     </div>
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
           <?php include 'nav.php'; ?>
       </div>
     </div>
-    <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-      <h1 class="page-header">Configure Account</h1>
+	<div class="col-md-offset-2 content">
+	
+	    <h1 class="page-header">Change Password</h1>
+	    
+		<form name="changePasswordForm" novalidate submit="changePassword()" ng-controller="FormCtrl">
+			<div style="width:500px" class="form-group">
+			    <input class="form-control" name="currentpassword" ng-model="password.currentPassword" type="password" placeholder="Current Password" required/>
+			</div>
+			<div style="width:500px" class="form-group">
+			    <input class="form-control" name="password" ng-model="password.newPassword" type="password" placeholder="New Password" required/>
+			</div>
+			<div style="width:500px" class="form-group">
+			    <input name="confirm_password" class="form-control" ng-model="password.confirmNewPassword" type="password" placeholder="Confirm New Password" required/>
+			</div>
+			{{password.currentPassword}}<br>
+			{{password.newPassword}}<br>
+			{{password.confirmNewPassword}}<br>
+		    <div class="form-group">
+		        <button type="submit" class="btn btn-primary pull-left" ng-click="changePassword()"
+		        	<span>Submit</span>
+		        </button>
+		    </div>
+   		</form>
+    </div>
+    <div class="col-md-offset-2 content" style="position: absolute;top: 400px;width: 100%">
+      <h1 class="page-header">Change Email</h1>
     </div>
   </body>
 </html>
@@ -48,3 +72,4 @@
   <script src="dist/js/bootstrap.min.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
   <script src="js/navpag.js"></script>
+  <script src="js/configAcct.js"></script>
